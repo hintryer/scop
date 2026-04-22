@@ -42,7 +42,7 @@ def unpack_manifest(json_path: str, output_dir: str = None):
 # ====================== 使用示例 ======================
 if __name__ == "__main__":
     # 你只需要改这一行
-    unpack_manifest("all_manifest.json")
+    unpack_manifest("github.json")
     
     # 如需自定义输出目录，用下面这行
-    # unpack_manifest("all_manifest.json", output_dir="my_output_folder")
+    # unpack_manifest("github.json", output_dir="my_output_folder")
