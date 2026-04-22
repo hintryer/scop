@@ -4,7 +4,7 @@
         "content": {
             "name": "MouseClickTool.exe",
             "savedir": "单文件",
-            "version": "3.1.0.0",
+            "version": "1.0",
             "description": "鼠标自动点击工具",
             "homepage": "https://github.com/lalakii/MouseClickTool",
             "license": "MIT",
@@ -17,7 +17,10 @@
                     "MouseClickTool"
                 ]
             ],
-            "checkver": "github",
+            "checkver": {
+                "url": "https://api.github.com/repos/lalakii/MouseClickTool/releases/latest",
+                "jsonpath": "$.tag_name"
+            },
             "autoupdate": {
                 "url": "https://github.com/lalakii/MouseClickTool/releases/download/$version/MouseClickTool.exe",
                 "name": "MouseClickTool.exe"
@@ -29,7 +32,7 @@
         "content": {
             "name": "Notepad4_HD_zh-Hans_x64_v26.03r6058.zip",
             "savedir": "文本办公",
-            "version": "26.03r6058",
+            "version": "1.0",
             "description": "轻量级文本编辑器",
             "homepage": "https://github.com/zufuliu/notepad4",
             "license": "MIT",
@@ -44,12 +47,12 @@
                 ]
             ],
             "checkver": {
-                "github": "https://github.com/zufuliu/notepad2",
-                "regex": "([\\d.]+r\\d+)"
+                "url": "https://api.github.com/repos/zufuliu/notepad4/releases/latest",
+                "jsonpath": "$.tag_name"
             },
             "autoupdate": {
-                "url": "https://github.com/zufuliu/notepad4/releases/download/v$version/Notepad4_HD_zh-Hans_x64_v$version.zip",
-                "name": "Notepad4_HD_zh-Hans_x64_v$version.zip"
+                "url": "https://github.com/zufuliu/notepad4/releases/download/$version/Notepad4_HD_zh-Hans_x64_$version.zip",
+                "name": "Notepad4_HD_zh-Hans_x64_$version.zip"
             }
         }
     },
@@ -58,7 +61,7 @@
         "content": {
             "name": "MusicPlayer2_V2.78_x64.zip",
             "savedir": "影音工具",
-            "version": "2.78",
+            "version": "1.0",
             "description": "简洁本地音乐播放器",
             "homepage": "https://github.com/zhongyang219/MusicPlayer2",
             "license": "MIT",
@@ -72,10 +75,13 @@
                     "MusicPlayer2"
                 ]
             ],
-            "checkver": "github",
+            "checkver": {
+                "url": "https://api.github.com/repos/zhongyang219/MusicPlayer2/releases/latest",
+                "jsonpath": "$.tag_name"
+            },
             "autoupdate": {
-                "url": "https://github.com/zhongyang219/MusicPlayer2/releases/download/V$version/MusicPlayer2_V$version_x64.zip",
-                "name": "MusicPlayer2_V$version_x64.zip"
+                "url": "https://github.com/zhongyang219/MusicPlayer2/releases/download/$version/MusicPlayer2_$version_x64.zip",
+                "name": "MusicPlayer2_$version_x64.zip"
             }
         }
     },
@@ -84,7 +90,7 @@
         "content": {
             "name": "",
             "savedir": "影音工具",
-            "version": null,
+            "version": "1.0",
             "description": "视频字幕识别工具",
             "homepage": "https://github.com/WEIFENG2333/VideoCaptioner",
             "license": "MIT",
@@ -93,7 +99,10 @@
             "extract_dir": null,
             "bin": null,
             "shortcuts": [],
-            "checkver": "github",
+            "checkver": {
+                "url": "https://api.github.com/repos/WEIFENG2333/VideoCaptioner/releases/latest",
+                "jsonpath": "$.tag_name"
+            },
             "autoupdate": {}
         }
     },
@@ -102,7 +111,7 @@
         "content": {
             "name": "Scribe2SRT-v0.3.5-windows-x86_64.zip",
             "savedir": "影音工具",
-            "version": "0.3.5",
+            "version": "1.0",
             "description": "音频转字幕工具",
             "homepage": "https://github.com/cylind/scribe2srt",
             "license": "MIT",
@@ -116,10 +125,13 @@
                     "Scribe2SRT"
                 ]
             ],
-            "checkver": "github",
+            "checkver": {
+                "url": "https://api.github.com/repos/cylind/scribe2srt/releases/latest",
+                "jsonpath": "$.tag_name"
+            },
             "autoupdate": {
-                "url": "https://github.com/cylind/scribe2srt/releases/download/v$version/Scribe2SRT-v$version-windows-x86_64.zip",
-                "name": "Scribe2SRT-v$version-windows-x86_64.zip"
+                "url": "https://github.com/cylind/scribe2srt/releases/download/$version/Scribe2SRT-$version-windows-x86_64.zip",
+                "name": "Scribe2SRT-$version-windows-x86_64.zip"
             }
         }
     },
@@ -128,7 +140,7 @@
         "content": {
             "name": "FFmpeg_Batch_AV_Converter_Portable_3.2.8_x64.zip",
             "savedir": "影音工具",
-            "version": "3.2.8",
+            "version": "1.0",
             "description": "音视频批量转换工具",
             "homepage": "https://github.com/eibols/ffmpeg_batch",
             "license": "MIT",
@@ -142,7 +154,10 @@
                     "FFmpeg Batch AV Converter"
                 ]
             ],
-            "checkver": "github",
+            "checkver": {
+                "url": "https://api.github.com/repos/eibols/ffmpeg_batch/releases/latest",
+                "jsonpath": "$.tag_name"
+            },
             "autoupdate": {
                 "url": "https://github.com/eibols/ffmpeg_batch/releases/download/$version/FFmpeg_Batch_AV_Converter_Portable_$version_x64.zip",
                 "name": "FFmpeg_Batch_AV_Converter_Portable_$version_x64.zip"
@@ -154,7 +169,7 @@
         "content": {
             "name": "lanzouyun-3.5.3-x64-win.zip",
             "savedir": "下载传输",
-            "version": "3.5.3",
+            "version": "1.0",
             "description": "蓝奏云非官方客户端",
             "homepage": "https://github.com/chenhb23/lanzouyun-disk",
             "license": "MIT",
@@ -168,9 +183,12 @@
                     "蓝奏云盘"
                 ]
             ],
-            "checkver": "github",
+            "checkver": {
+                "url": "https://api.github.com/repos/chenhb23/lanzouyun-disk/releases/latest",
+                "jsonpath": "$.tag_name"
+            },
             "autoupdate": {
-                "url": "https://github.com/chenhb23/lanzouyun-disk/releases/download/v$version/lanzouyun-$version-x64-win.zip",
+                "url": "https://github.com/chenhb23/lanzouyun-disk/releases/download/$version/lanzouyun-$version-x64-win.zip",
                 "name": "lanzouyun-$version-x64-win.zip"
             }
         }
@@ -180,7 +198,7 @@
         "content": {
             "name": "LocalSend-1.17.0-windows-x86-64.zip",
             "savedir": "下载传输",
-            "version": "1.17.0",
+            "version": "1.0",
             "description": "局域网文件互传工具",
             "homepage": "https://localsend.org/",
             "license": "MIT",
@@ -195,10 +213,11 @@
                 ]
             ],
             "checkver": {
-                "github": "https://github.com/localsend/localsend"
+                "url": "https://api.github.com/repos/localsend/localsend/releases/latest",
+                "jsonpath": "$.tag_name"
             },
             "autoupdate": {
-                "url": "https://github.com/localsend/localsend/releases/download/v$version/LocalSend-$version-windows-x86-64.zip",
+                "url": "https://github.com/localsend/localsend/releases/download/$version/LocalSend-$version-windows-x86-64.zip",
                 "name": "LocalSend-$version-windows-x86-64.zip"
             }
         }
@@ -208,7 +227,7 @@
         "content": {
             "name": "Bili23_Downloader-v1.70.4-windows-x64.zip",
             "savedir": "其他工具",
-            "version": "1.70.4",
+            "version": "1.0",
             "description": "B站视频下载工具",
             "homepage": "https://github.com/ScottSloan/Bili23-Downloader",
             "license": "MIT",
@@ -222,10 +241,13 @@
                     "Bili23 Downloader"
                 ]
             ],
-            "checkver": "github",
+            "checkver": {
+                "url": "https://api.github.com/repos/ScottSloan/Bili23-Downloader/releases/latest",
+                "jsonpath": "$.tag_name"
+            },
             "autoupdate": {
-                "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v$version/Bili23-Downloader_$version_windows_x64_portable.zip",
-                "name": "Bili23-Downloader_$version_windows_x64_portable.zip"
+                "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/$version/Bili23_Downloader-$version-windows-x64.zip",
+                "name": "Bili23_Downloader-$version-windows-x64.zip"
             }
         }
     },
@@ -234,7 +256,7 @@
         "content": {
             "name": "Clash.Verge_2.4.7_x64-setup.exe",
             "savedir": "其他工具",
-            "version": "2.4.7",
+            "version": "1.0",
             "description": "Clash图形化代理客户端",
             "homepage": "https://github.com/clash-verge-rev/clash-verge-rev",
             "license": "GPL-3.0",
@@ -247,9 +269,12 @@
                     "Clash Verge Rev"
                 ]
             ],
-            "checkver": "github",
+            "checkver": {
+                "url": "https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases/latest",
+                "jsonpath": "$.tag_name"
+            },
             "autoupdate": {
-                "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v$version/Clash.Verge_$version_x64-setup.exe",
+                "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/$version/Clash.Verge_$version_x64-setup.exe",
                 "name": "Clash.Verge_$version_x64-setup.exe"
             }
         }
@@ -259,7 +284,7 @@
         "content": {
             "name": "ffmpeg-8.1-essentials_build.7z",
             "savedir": "编程工具",
-            "version": "8.1",
+            "version": "1.0",
             "description": "精简版音视频处理工具",
             "homepage": "https://ffmpeg.org/",
             "license": "MIT",
@@ -272,7 +297,8 @@
                 "bin/ffplay.exe"
             ],
             "checkver": {
-                "github": "https://github.com/GyanD/codexffmpeg"
+                "url": "https://api.github.com/repos/GyanD/codexffmpeg/releases/latest",
+                "jsonpath": "$.tag_name"
             },
             "autoupdate": {
                 "url": "https://github.com/GyanD/codexffmpeg/releases/download/$version/ffmpeg-$version-essentials_build.7z",
@@ -285,7 +311,7 @@
         "content": {
             "name": "ffmpeg-8.1-full_build.7z",
             "savedir": "编程工具",
-            "version": "8.1",
+            "version": "1.0",
             "description": "完整版音视频处理工具",
             "homepage": "https://ffmpeg.org/",
             "license": "MIT",
@@ -298,7 +324,8 @@
                 "bin/ffplay.exe"
             ],
             "checkver": {
-                "github": "https://github.com/GyanD/codexffmpeg"
+                "url": "https://api.github.com/repos/GyanD/codexffmpeg/releases/latest",
+                "jsonpath": "$.tag_name"
             },
             "autoupdate": {
                 "url": "https://github.com/GyanD/codexffmpeg/releases/download/$version/ffmpeg-$version-full_build.7z",
@@ -311,7 +338,7 @@
         "content": {
             "name": "PortableGit-2.54.0-64-bit.7z.exe",
             "savedir": "编程工具",
-            "version": "2.54.0.windows.1",
+            "version": "1.0",
             "description": "便携版Git版本控制工具",
             "homepage": "https://gitforwindows.org/",
             "license": "GPL-2.0",
@@ -323,12 +350,11 @@
                 "cmd/git.exe"
             ],
             "checkver": {
-                "url": "https://api.github.com/repositories/23216272/releases/latest",
-                "jsonpath": "$..browser_download_url",
-                "regex": "download/v(?<tag>[\\d.]+windows\\.\\d)/PortableGit-([\\d.]+)-64"
+                "url": "https://api.github.com/repos/git-for-windows/git/releases/latest",
+                "jsonpath": "$.tag_name"
             },
             "autoupdate": {
-                "url": "https://github.com/git-for-windows/git/releases/download/v$version/PortableGit-$version-64-bit.7z.exe",
+                "url": "https://github.com/git-for-windows/git/releases/download/$version/PortableGit-$version-64-bit.7z.exe",
                 "name": "PortableGit-$version-64-bit.7z.exe"
             }
         }
