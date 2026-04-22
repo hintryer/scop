@@ -16,7 +16,8 @@
         ]
     ],
     "checkver": {
-        "github": "cylind/scribe2srt"
+        "github": "https://github.com/cylind/scribe2srt",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://github.com/cylind/scribe2srt/releases/download/v$version/Scribe2SRT-v$version-windows-x86_64.zip",

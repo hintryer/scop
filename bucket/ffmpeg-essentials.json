@@ -14,7 +14,8 @@
         "bin/ffplay.exe"
     ],
     "checkver": {
-        "github": "GyanD/codexffmpeg"
+        "github": "https://github.com/GyanD/codexffmpeg",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://github.com/GyanD/codexffmpeg/releases/download/$version/ffmpeg-$version-essentials_build.7z",

@@ -16,7 +16,8 @@
         ]
     ],
     "checkver": {
-        "github": "zhongyang219/MusicPlayer2"
+        "github": "https://github.com/zhongyang219/MusicPlayer2",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://github.com/zhongyang219/MusicPlayer2/releases/download/V$version/MusicPlayer2_V$version_x64.zip",

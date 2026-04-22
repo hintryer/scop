@@ -16,7 +16,8 @@
         ]
     ],
     "checkver": {
-        "github": "ScottSloan/Bili23-Downloader"
+        "github": "https://github.com/ScottSloan/Bili23-Downloader",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v$version/Bili23_Downloader-$version-windows-x64.zip",

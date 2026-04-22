@@ -11,7 +11,8 @@
     "bin": null,
     "shortcuts": [],
     "checkver": {
-        "github": "WEIFENG2333/VideoCaptioner"
+        "github": "https://github.com/WEIFENG2333/VideoCaptioner",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {}
 }

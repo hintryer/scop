@@ -16,7 +16,8 @@
         ]
     ],
     "checkver": {
-        "github": "eibols/ffmpeg_batch"
+        "github": "https://github.com/eibols/ffmpeg_batch",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://github.com/eibols/ffmpeg_batch/releases/download/$version/FFmpeg_Batch_AV_Converter_Portable_$version_x64.zip",
