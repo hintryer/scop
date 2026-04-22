@@ -15,7 +15,10 @@
             "Notepad4"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/zufuliu/notepad2",
+        "regex": "([\\d.]+r\\d+)"
+    },
     "autoupdate": {
         "url": "https://github.com/zufuliu/notepad4/releases/download/v$version/Notepad4_HD_zh-Hans_x64_v$version.zip",
         "name": "Notepad4_HD_zh-Hans_x64_v$version.zip"
