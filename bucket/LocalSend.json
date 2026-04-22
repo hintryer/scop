@@ -15,10 +15,7 @@
             "LocalSend"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/localsend/localsend",
-        "regex": "([\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/localsend/localsend/releases/download/v$version/LocalSend-$version-windows-x86-64.zip",
         "name": "LocalSend-$version-windows-x86-64.zip"

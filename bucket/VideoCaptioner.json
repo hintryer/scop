@@ -10,9 +10,6 @@
     "extract_dir": null,
     "bin": null,
     "shortcuts": [],
-    "checkver": {
-        "github": "https://github.com/WEIFENG2333/VideoCaptioner",
-        "regex": "([\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {}
 }

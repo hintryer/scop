@@ -14,10 +14,7 @@
             "Clash Verge Rev"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/clash-verge-rev/clash-verge-rev",
-        "regex": "([\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v$version/Clash.Verge_$version_x64-setup.exe",
         "name": "Clash.Verge_$version_x64-setup.exe"

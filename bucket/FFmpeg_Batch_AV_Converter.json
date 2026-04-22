@@ -15,10 +15,7 @@
             "FFmpeg Batch AV Converter"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/eibols/ffmpeg_batch",
-        "regex": "([\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/eibols/ffmpeg_batch/releases/download/$version/FFmpeg_Batch_AV_Converter_Portable_$version_x64.zip",
         "name": "FFmpeg_Batch_AV_Converter_Portable_$version_x64.zip"

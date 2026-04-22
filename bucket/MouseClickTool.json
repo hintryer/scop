@@ -14,10 +14,7 @@
             "MouseClickTool"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/lalakii/MouseClickTool",
-        "regex": "([\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/lalakii/MouseClickTool/releases/download/$version/MouseClickTool.exe",
         "name": "MouseClickTool.exe"

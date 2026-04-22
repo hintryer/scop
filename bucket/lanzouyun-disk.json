@@ -15,10 +15,7 @@
             "蓝奏云盘"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/chenhb23/lanzouyun-disk",
-        "regex": "([\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/chenhb23/lanzouyun-disk/releases/download/v$version/lanzouyun-$version-x64-win.zip",
         "name": "lanzouyun-$version-x64-win.zip"
