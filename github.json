@@ -191,7 +191,9 @@
                     "LocalSend"
                 ]
             ],
-            "checkver": "github",
+            "checkver": {
+                "github": "https://github.com/localsend/localsend"
+            },
             "autoupdate": {
                 "url": "https://github.com/localsend/localsend/releases/download/v$version/LocalSend-$version-windows-x86-64.zip",
                 "name": "LocalSend-$version-windows-x86-64.zip"
@@ -201,15 +203,15 @@
     {
         "filename": "Bili23-Downloader.json",
         "content": {
-            "name": "Bili23_Downloader-1.70.4-windows-x64.zip",
+            "name": "Bili23_Downloader-v1.70.4-windows-x64.zip",
             "savedir": "其他工具",
             "version": "1.70.4",
             "description": "B站视频下载工具",
             "homepage": "https://github.com/ScottSloan/Bili23-Downloader",
             "license": "MIT",
-            "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v1.70.4/Bili23_Downloader-1.70.4-windows-x64.zip",
+            "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v1.70.4/Bili23_Downloader-v1.70.4-windows-x64.zip",
             "hash": "auto",
-            "extract_dir": "Bili23_Downloader-1.70.4-windows-x64",
+            "extract_dir": "Bili23_Downloader-v1.70.4-windows-x64",
             "bin": "Bili23_Downloader.exe",
             "shortcuts": [
                 [
@@ -219,8 +221,8 @@
             ],
             "checkver": "github",
             "autoupdate": {
-                "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v$version/Bili23_Downloader-$version-windows-x64.zip",
-                "name": "Bili23_Downloader-$version-windows-x64.zip"
+                "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v$version/Bili23_Downloader-v$version-windows-x64.zip",
+                "name": "Bili23_Downloader-v$version-windows-x64.zip"
             }
         }
     },
@@ -266,7 +268,9 @@
                 "bin/ffprobe.exe",
                 "bin/ffplay.exe"
             ],
-            "checkver": "github",
+            "checkver": {
+                "github": "https://github.com/GyanD/codexffmpeg"
+            },
             "autoupdate": {
                 "url": "https://github.com/GyanD/codexffmpeg/releases/download/$version/ffmpeg-$version-essentials_build.7z",
                 "name": "ffmpeg-$version-essentials_build.7z"
@@ -290,7 +294,9 @@
                 "bin/ffprobe.exe",
                 "bin/ffplay.exe"
             ],
-            "checkver": "github",
+            "checkver": {
+                "github": "https://github.com/GyanD/codexffmpeg"
+            },
             "autoupdate": {
                 "url": "https://github.com/GyanD/codexffmpeg/releases/download/$version/ffmpeg-$version-full_build.7z",
                 "name": "ffmpeg-$version-full_build.7z"
@@ -313,7 +319,9 @@
                 "bin/git.exe",
                 "cmd/git.exe"
             ],
-            "checkver": "github",
+            "checkver": {
+                "github": "https://github.com/git-for-windows/git"
+            },
             "autoupdate": {
                 "url": "https://github.com/git-for-windows/git/releases/download/v$version/PortableGit-$version-64-bit.7z.exe",
                 "name": "PortableGit-$version-64-bit.7z.exe"
