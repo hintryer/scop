@@ -17,10 +17,7 @@
                     "MouseClickTool"
                 ]
             ],
-            "checkver": {
-                "github": "https://github.com/lalakii/MouseClickTool",
-                "regex": "([\\d.]+)"
-            },
+            "checkver": "github",
             "autoupdate": {
                 "url": "https://github.com/lalakii/MouseClickTool/releases/download/$version/MouseClickTool.exe",
                 "name": "MouseClickTool.exe"
@@ -46,10 +43,7 @@
                     "Notepad4"
                 ]
             ],
-            "checkver": {
-                "github": "https://github.com/zufuliu/notepad4",
-                "regex": "([\\d.]+r\\d+)"
-            },
+            "checkver": "github",
             "autoupdate": {
                 "url": "https://github.com/zufuliu/notepad4/releases/download/v$version/Notepad4_HD_zh-Hans_x64_v$version.zip",
                 "name": "Notepad4_HD_zh-Hans_x64_v$version.zip"
@@ -75,10 +69,7 @@
                     "MusicPlayer2"
                 ]
             ],
-            "checkver": {
-                "github": "https://github.com/zhongyang219/MusicPlayer2",
-                "regex": "([\\d.]+)"
-            },
+            "checkver": "github",
             "autoupdate": {
                 "url": "https://github.com/zhongyang219/MusicPlayer2/releases/download/V$version/MusicPlayer2_V$version_x64.zip",
                 "name": "MusicPlayer2_V$version_x64.zip"
@@ -99,10 +90,7 @@
             "extract_dir": null,
             "bin": null,
             "shortcuts": [],
-            "checkver": {
-                "github": "https://github.com/WEIFENG2333/VideoCaptioner",
-                "regex": "([\\d.]+)"
-            },
+            "checkver": "github",
             "autoupdate": {}
         }
     },
@@ -125,10 +113,7 @@
                     "Scribe2SRT"
                 ]
             ],
-            "checkver": {
-                "github": "https://github.com/cylind/scribe2srt",
-                "regex": "([\\d.]+)"
-            },
+            "checkver": "github",
             "autoupdate": {
                 "url": "https://github.com/cylind/scribe2srt/releases/download/v$version/Scribe2SRT-v$version-windows-x86_64.zip",
                 "name": "Scribe2SRT-v$version-windows-x86_64.zip"
@@ -154,10 +139,7 @@
                     "FFmpeg Batch AV Converter"
                 ]
             ],
-            "checkver": {
-                "github": "https://github.com/eibols/ffmpeg_batch",
-                "regex": "([\\d.]+)"
-            },
+            "checkver": "github",
             "autoupdate": {
                 "url": "https://github.com/eibols/ffmpeg_batch/releases/download/$version/FFmpeg_Batch_AV_Converter_Portable_$version_x64.zip",
                 "name": "FFmpeg_Batch_AV_Converter_Portable_$version_x64.zip"
@@ -183,10 +165,7 @@
                     "蓝奏云盘"
                 ]
             ],
-            "checkver": {
-                "github": "https://github.com/chenhb23/lanzouyun-disk",
-                "regex": "([\\d.]+)"
-            },
+            "checkver": "github",
             "autoupdate": {
                 "url": "https://github.com/chenhb23/lanzouyun-disk/releases/download/v$version/lanzouyun-$version-x64-win.zip",
                 "name": "lanzouyun-$version-x64-win.zip"
@@ -212,10 +191,7 @@
                     "LocalSend"
                 ]
             ],
-            "checkver": {
-                "github": "https://github.com/localsend/localsend",
-                "regex": "([\\d.]+)"
-            },
+            "checkver": "github",
             "autoupdate": {
                 "url": "https://github.com/localsend/localsend/releases/download/v$version/LocalSend-$version-windows-x86-64.zip",
                 "name": "LocalSend-$version-windows-x86-64.zip"
@@ -241,10 +217,7 @@
                     "Bili23 Downloader"
                 ]
             ],
-            "checkver": {
-                "github": "https://github.com/ScottSloan/Bili23-Downloader",
-                "regex": "([\\d.]+)"
-            },
+            "checkver": "github",
             "autoupdate": {
                 "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v$version/Bili23_Downloader-$version-windows-x64.zip",
                 "name": "Bili23_Downloader-$version-windows-x64.zip"
@@ -269,10 +242,7 @@
                     "Clash Verge Rev"
                 ]
             ],
-            "checkver": {
-                "github": "https://github.com/clash-verge-rev/clash-verge-rev",
-                "regex": "([\\d.]+)"
-            },
+            "checkver": "github",
             "autoupdate": {
                 "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v$version/Clash.Verge_$version_x64-setup.exe",
                 "name": "Clash.Verge_$version_x64-setup.exe"
@@ -296,10 +266,7 @@
                 "bin/ffprobe.exe",
                 "bin/ffplay.exe"
             ],
-            "checkver": {
-                "github": "https://github.com/GyanD/codexffmpeg",
-                "regex": "([\\d.]+)"
-            },
+            "checkver": "github",
             "autoupdate": {
                 "url": "https://github.com/GyanD/codexffmpeg/releases/download/$version/ffmpeg-$version-essentials_build.7z",
                 "name": "ffmpeg-$version-essentials_build.7z"
@@ -323,10 +290,7 @@
                 "bin/ffprobe.exe",
                 "bin/ffplay.exe"
             ],
-            "checkver": {
-                "github": "https://github.com/GyanD/codexffmpeg",
-                "regex": "([\\d.]+)"
-            },
+            "checkver": "github",
             "autoupdate": {
                 "url": "https://github.com/GyanD/codexffmpeg/releases/download/$version/ffmpeg-$version-full_build.7z",
                 "name": "ffmpeg-$version-full_build.7z"
@@ -349,10 +313,7 @@
                 "bin/git.exe",
                 "cmd/git.exe"
             ],
-            "checkver": {
-                "github": "https://github.com/git-for-windows/git",
-                "regex": "([\\d.windows.]+)"
-            },
+            "checkver": "github",
             "autoupdate": {
                 "url": "https://github.com/git-for-windows/git/releases/download/v$version/PortableGit-$version-64-bit.7z.exe",
                 "name": "PortableGit-$version-64-bit.7z.exe"
