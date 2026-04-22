@@ -17,7 +17,7 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v$version/Bili23_Downloader-v$version-windows-x64.zip",
+        "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v$version/Bili23_Downloader-v$version-windows_x64_portable.zip",
         "name": "Bili23_Downloader-v$version-windows-x64.zip"
     }
 }
