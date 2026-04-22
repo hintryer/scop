@@ -1,8 +1,8 @@
 {
     "name": "",
-    "savedir": "soft/影音工具",
+    "savedir": "影音工具",
     "version": null,
-    "description": "Video caption recognition tool.",
+    "description": "视频字幕识别工具",
     "homepage": "https://github.com/WEIFENG2333/VideoCaptioner",
     "license": "MIT",
     "url": null,

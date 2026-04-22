@@ -1,8 +1,8 @@
 {
     "name": "Scribe2SRT-v0.3.5-windows-x86_64.zip",
-    "savedir": "soft/影音工具",
+    "savedir": "影音工具",
     "version": "0.3.5",
-    "description": "Transcribe audio to SRT subtitle.",
+    "description": "音频转字幕工具",
     "homepage": "https://github.com/cylind/scribe2srt",
     "license": "MIT",
     "url": "https://github.com/cylind/scribe2srt/releases/download/v0.3.5/Scribe2SRT-v0.3.5-windows-x86_64.zip",

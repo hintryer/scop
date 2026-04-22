@@ -1,8 +1,8 @@
 {
     "name": "ffmpeg-8.1-full_build.7z",
-    "savedir": "soft/编程工具",
+    "savedir": "编程工具",
     "version": "8.1",
-    "description": "FFmpeg full build.",
+    "description": "完整版音视频处理工具",
     "homepage": "https://ffmpeg.org/",
     "license": "MIT",
     "url": "https://github.com/GyanD/codexffmpeg/releases/download/8.1/ffmpeg-8.1-full_build.7z",
