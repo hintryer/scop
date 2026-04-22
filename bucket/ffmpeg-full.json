@@ -13,7 +13,9 @@
         "bin/ffprobe.exe",
         "bin/ffplay.exe"
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/GyanD/codexffmpeg"
+    },
     "autoupdate": {
         "url": "https://github.com/GyanD/codexffmpeg/releases/download/$version/ffmpeg-$version-full_build.7z",
         "name": "ffmpeg-$version-full_build.7z"

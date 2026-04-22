@@ -12,7 +12,9 @@
         "bin/git.exe",
         "cmd/git.exe"
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/git-for-windows/git"
+    },
     "autoupdate": {
         "url": "https://github.com/git-for-windows/git/releases/download/v$version/PortableGit-$version-64-bit.7z.exe",
         "name": "PortableGit-$version-64-bit.7z.exe"
