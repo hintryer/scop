@@ -13,7 +13,7 @@ def unpack_manifest(json_path: str, output_dir: str = None):
     
     # 2. 设置默认输出目录：scr 文件夹
     if output_dir is None:
-        output_dir = os.path.join(base_dir, "scr")
+        output_dir = os.path.join(base_dir, "bucket")
     
     # 3. 自动创建输出目录（不存在则创建）
     os.makedirs(output_dir, exist_ok=True)
