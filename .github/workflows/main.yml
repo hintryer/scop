@@ -1,4 +1,4 @@
-name: Auto Update
+name: main
 on:
   push:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: '0 6 * * *'
 
 jobs:
-  updateware:
+  main:
     runs-on: ubuntu-latest
     permissions:
       contents: write
