@@ -1,7 +1,7 @@
 {
     "name": "PortableGit-2.54.0-64-bit.7z.exe",
     "savedir": "编程工具",
-    "version": "2.54.0.windows.1",
+    "version": "1.0",
     "description": "便携版Git版本控制工具",
     "homepage": "https://gitforwindows.org/",
     "license": "GPL-2.0",
@@ -13,12 +13,11 @@
         "cmd/git.exe"
     ],
     "checkver": {
-        "url": "https://api.github.com/repositories/23216272/releases/latest",
-        "jsonpath": "$..browser_download_url",
-        "regex": "download/v(?<tag>[\\d.]+windows\\.\\d)/PortableGit-([\\d.]+)-64"
+        "url": "https://api.github.com/repos/git-for-windows/git/releases/latest",
+        "jsonpath": "$.tag_name"
     },
     "autoupdate": {
-        "url": "https://github.com/git-for-windows/git/releases/download/v$version/PortableGit-$version-64-bit.7z.exe",
+        "url": "https://github.com/git-for-windows/git/releases/download/$version/PortableGit-$version-64-bit.7z.exe",
         "name": "PortableGit-$version-64-bit.7z.exe"
     }
 }

@@ -1,7 +1,7 @@
 {
     "name": "Bili23_Downloader-v1.70.4-windows-x64.zip",
     "savedir": "其他工具",
-    "version": "1.70.4",
+    "version": "1.0",
     "description": "B站视频下载工具",
     "homepage": "https://github.com/ScottSloan/Bili23-Downloader",
     "license": "MIT",
@@ -15,9 +15,12 @@
             "Bili23 Downloader"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/ScottSloan/Bili23-Downloader/releases/latest",
+        "jsonpath": "$.tag_name"
+    },
     "autoupdate": {
-        "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v$version/Bili23-Downloader_$version_windows_x64_portable.zip",
-        "name": "Bili23-Downloader_$version_windows_x64_portable.zip"
+        "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/$version/Bili23_Downloader-$version-windows-x64.zip",
+        "name": "Bili23_Downloader-$version-windows-x64.zip"
     }
 }

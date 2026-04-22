@@ -1,7 +1,7 @@
 {
     "name": "MouseClickTool.exe",
     "savedir": "单文件",
-    "version": "3.1.0.0",
+    "version": "1.0",
     "description": "鼠标自动点击工具",
     "homepage": "https://github.com/lalakii/MouseClickTool",
     "license": "MIT",
@@ -14,7 +14,10 @@
             "MouseClickTool"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/lalakii/MouseClickTool/releases/latest",
+        "jsonpath": "$.tag_name"
+    },
     "autoupdate": {
         "url": "https://github.com/lalakii/MouseClickTool/releases/download/$version/MouseClickTool.exe",
         "name": "MouseClickTool.exe"

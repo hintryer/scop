@@ -1,7 +1,7 @@
 {
     "name": "",
     "savedir": "影音工具",
-    "version": null,
+    "version": "1.0",
     "description": "视频字幕识别工具",
     "homepage": "https://github.com/WEIFENG2333/VideoCaptioner",
     "license": "MIT",
@@ -10,6 +10,9 @@
     "extract_dir": null,
     "bin": null,
     "shortcuts": [],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/WEIFENG2333/VideoCaptioner/releases/latest",
+        "jsonpath": "$.tag_name"
+    },
     "autoupdate": {}
 }

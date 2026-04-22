@@ -1,7 +1,7 @@
 {
     "name": "Notepad4_HD_zh-Hans_x64_v26.03r6058.zip",
     "savedir": "文本办公",
-    "version": "26.03r6058",
+    "version": "1.0",
     "description": "轻量级文本编辑器",
     "homepage": "https://github.com/zufuliu/notepad4",
     "license": "MIT",
@@ -16,11 +16,11 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/zufuliu/notepad2",
-        "regex": "([\\d.]+r\\d+)"
+        "url": "https://api.github.com/repos/zufuliu/notepad4/releases/latest",
+        "jsonpath": "$.tag_name"
     },
     "autoupdate": {
-        "url": "https://github.com/zufuliu/notepad4/releases/download/v$version/Notepad4_HD_zh-Hans_x64_v$version.zip",
-        "name": "Notepad4_HD_zh-Hans_x64_v$version.zip"
+        "url": "https://github.com/zufuliu/notepad4/releases/download/$version/Notepad4_HD_zh-Hans_x64_$version.zip",
+        "name": "Notepad4_HD_zh-Hans_x64_$version.zip"
     }
 }

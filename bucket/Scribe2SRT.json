@@ -1,7 +1,7 @@
 {
     "name": "Scribe2SRT-v0.3.5-windows-x86_64.zip",
     "savedir": "影音工具",
-    "version": "0.3.5",
+    "version": "1.0",
     "description": "音频转字幕工具",
     "homepage": "https://github.com/cylind/scribe2srt",
     "license": "MIT",
@@ -15,9 +15,12 @@
             "Scribe2SRT"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/cylind/scribe2srt/releases/latest",
+        "jsonpath": "$.tag_name"
+    },
     "autoupdate": {
-        "url": "https://github.com/cylind/scribe2srt/releases/download/v$version/Scribe2SRT-v$version-windows-x86_64.zip",
-        "name": "Scribe2SRT-v$version-windows-x86_64.zip"
+        "url": "https://github.com/cylind/scribe2srt/releases/download/$version/Scribe2SRT-$version-windows-x86_64.zip",
+        "name": "Scribe2SRT-$version-windows-x86_64.zip"
     }
 }
