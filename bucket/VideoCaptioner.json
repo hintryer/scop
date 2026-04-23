@@ -10,9 +10,21 @@
     "extract_dir": null,
     "bin": null,
     "shortcuts": [],
-    "checkver": {
-        "url": "https://api.github.com/repos/WEIFENG2333/VideoCaptioner/releases/latest",
-        "jsonpath": "$.tag_name"
-    },
-    "autoupdate": {}
+    "checkver": [
+        {
+            "url": "https://api.github.com/repos/WEIFENG2333/VideoCaptioner/releases/latest",
+            "jsonpath": "$.tag_name",
+            "regex": "(?<version>.+)"
+        },
+        {
+            "url": "https://api.github.com/repos/WEIFENG2333/VideoCaptioner/releases/latest",
+            "jsonpath": "$..browser_download_url",
+            "regex": "([^/]+)$",
+            "variable": "filename"
+        }
+    ],
+    "autoupdate": {
+        "url": "https://github.com/WEIFENG2333/VideoCaptioner/releases/download/$version/$filename",
+        "name": "$filename"
+    }
 }

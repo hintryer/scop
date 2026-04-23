@@ -15,12 +15,21 @@
             "Bili23 Downloader"
         ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/ScottSloan/Bili23-Downloader/releases/latest",
-        "jsonpath": "$.tag_name"
-    },
+    "checkver": [
+        {
+            "url": "https://api.github.com/repos/ScottSloan/Bili23-Downloader/releases/latest",
+            "jsonpath": "$.tag_name",
+            "regex": "v(?<version>.+)"
+        },
+        {
+            "url": "https://api.github.com/repos/ScottSloan/Bili23-Downloader/releases/latest",
+            "jsonpath": "$..browser_download_url",
+            "regex": "([^/]+\\.zip)$",
+            "variable": "filename"
+        }
+    ],
     "autoupdate": {
-        "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/$version/Bili23_Downloader-$version-windows-x64.zip",
-        "name": "Bili23_Downloader-$version-windows-x64.zip"
+        "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v$version/$filename",
+        "name": "$filename"
     }
 }

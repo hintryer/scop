@@ -13,12 +13,21 @@
         "bin/ffprobe.exe",
         "bin/ffplay.exe"
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/GyanD/codexffmpeg/releases/latest",
-        "jsonpath": "$.tag_name"
-    },
+    "checkver": [
+        {
+            "url": "https://api.github.com/repos/GyanD/codexffmpeg/releases/latest",
+            "jsonpath": "$.tag_name",
+            "regex": "(?<version>.+)"
+        },
+        {
+            "url": "https://api.github.com/repos/GyanD/codexffmpeg/releases/latest",
+            "jsonpath": "$..browser_download_url",
+            "regex": "([^/]+full_build\\.7z)$",
+            "variable": "filename"
+        }
+    ],
     "autoupdate": {
-        "url": "https://github.com/GyanD/codexffmpeg/releases/download/$version/ffmpeg-$version-full_build.7z",
-        "name": "ffmpeg-$version-full_build.7z"
+        "url": "https://github.com/GyanD/codexffmpeg/releases/download/$version/$filename",
+        "name": "$filename"
     }
 }

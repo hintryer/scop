@@ -14,12 +14,21 @@
             "MouseClickTool"
         ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/lalakii/MouseClickTool/releases/latest",
-        "jsonpath": "$.tag_name"
-    },
+    "checkver": [
+        {
+            "url": "https://api.github.com/repos/lalakii/MouseClickTool/releases/latest",
+            "jsonpath": "$.tag_name",
+            "regex": "(?<version>.+)"
+        },
+        {
+            "url": "https://api.github.com/repos/lalakii/MouseClickTool/releases/latest",
+            "jsonpath": "$..browser_download_url",
+            "regex": "([^/]+\\.exe)$",
+            "variable": "filename"
+        }
+    ],
     "autoupdate": {
-        "url": "https://github.com/lalakii/MouseClickTool/releases/download/$version/MouseClickTool.exe",
-        "name": "MouseClickTool.exe"
+        "url": "https://github.com/lalakii/MouseClickTool/releases/download/$version/$filename",
+        "name": "$filename"
     }
 }

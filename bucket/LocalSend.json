@@ -15,12 +15,21 @@
             "LocalSend"
         ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/localsend/localsend/releases/latest",
-        "jsonpath": "$.tag_name"
-    },
+    "checkver": [
+        {
+            "url": "https://api.github.com/repos/localsend/localsend/releases/latest",
+            "jsonpath": "$.tag_name",
+            "regex": "v(?<version>.+)"
+        },
+        {
+            "url": "https://api.github.com/repos/localsend/localsend/releases/latest",
+            "jsonpath": "$..browser_download_url",
+            "regex": "([^/]+\\.zip)$",
+            "variable": "filename"
+        }
+    ],
     "autoupdate": {
-        "url": "https://github.com/localsend/localsend/releases/download/$version/LocalSend-$version-windows-x86-64.zip",
-        "name": "LocalSend-$version-windows-x86-64.zip"
+        "url": "https://github.com/localsend/localsend/releases/download/v$version/$filename",
+        "name": "$filename"
     }
 }

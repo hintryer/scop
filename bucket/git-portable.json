@@ -12,12 +12,21 @@
         "bin/git.exe",
         "cmd/git.exe"
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/git-for-windows/git/releases/latest",
-        "jsonpath": "$.tag_name"
-    },
+    "checkver": [
+        {
+            "url": "https://api.github.com/repos/git-for-windows/git/releases/latest",
+            "jsonpath": "$.tag_name",
+            "regex": "v(?<version>.+)"
+        },
+        {
+            "url": "https://api.github.com/repos/git-for-windows/git/releases/latest",
+            "jsonpath": "$..browser_download_url",
+            "regex": "([^/]+PortableGit.+\\.7z\\.exe)$",
+            "variable": "filename"
+        }
+    ],
     "autoupdate": {
-        "url": "https://github.com/git-for-windows/git/releases/download/$version/PortableGit-$version-64-bit.7z.exe",
-        "name": "PortableGit-$version-64-bit.7z.exe"
+        "url": "https://github.com/git-for-windows/git/releases/download/v$version/$filename",
+        "name": "$filename"
     }
 }

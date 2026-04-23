@@ -14,12 +14,21 @@
             "Clash Verge Rev"
         ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases/latest",
-        "jsonpath": "$.tag_name"
-    },
+    "checkver": [
+        {
+            "url": "https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases/latest",
+            "jsonpath": "$.tag_name",
+            "regex": "v(?<version>.+)"
+        },
+        {
+            "url": "https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases/latest",
+            "jsonpath": "$..browser_download_url",
+            "regex": "([^/]+\\.exe)$",
+            "variable": "filename"
+        }
+    ],
     "autoupdate": {
-        "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/$version/Clash.Verge_$version_x64-setup.exe",
-        "name": "Clash.Verge_$version_x64-setup.exe"
+        "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v$version/$filename",
+        "name": "$filename"
     }
 }

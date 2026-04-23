@@ -15,12 +15,21 @@
             "FFmpeg Batch AV Converter"
         ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/eibols/ffmpeg_batch/releases/latest",
-        "jsonpath": "$.tag_name"
-    },
+    "checkver": [
+        {
+            "url": "https://api.github.com/repos/eibols/ffmpeg_batch/releases/latest",
+            "jsonpath": "$.tag_name",
+            "regex": "(?<version>.+)"
+        },
+        {
+            "url": "https://api.github.com/repos/eibols/ffmpeg_batch/releases/latest",
+            "jsonpath": "$..browser_download_url",
+            "regex": "([^/]+\\.zip)$",
+            "variable": "filename"
+        }
+    ],
     "autoupdate": {
-        "url": "https://github.com/eibols/ffmpeg_batch/releases/download/$version/FFmpeg_Batch_AV_Converter_Portable_$version_x64.zip",
-        "name": "FFmpeg_Batch_AV_Converter_Portable_$version_x64.zip"
+        "url": "https://github.com/eibols/ffmpeg_batch/releases/download/$version/$filename",
+        "name": "$filename"
     }
 }

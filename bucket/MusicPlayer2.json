@@ -15,12 +15,21 @@
             "MusicPlayer2"
         ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/zhongyang219/MusicPlayer2/releases/latest",
-        "jsonpath": "$.tag_name"
-    },
+    "checkver": [
+        {
+            "url": "https://api.github.com/repos/zhongyang219/MusicPlayer2/releases/latest",
+            "jsonpath": "$.tag_name",
+            "regex": "(?<version>.+)"
+        },
+        {
+            "url": "https://api.github.com/repos/zhongyang219/MusicPlayer2/releases/latest",
+            "jsonpath": "$..browser_download_url",
+            "regex": "([^/]+\\.zip)$",
+            "variable": "filename"
+        }
+    ],
     "autoupdate": {
-        "url": "https://github.com/zhongyang219/MusicPlayer2/releases/download/$version/MusicPlayer2_$version_x64.zip",
-        "name": "MusicPlayer2_$version_x64.zip"
+        "url": "https://github.com/zhongyang219/MusicPlayer2/releases/download/$version/$filename",
+        "name": "$filename"
     }
 }

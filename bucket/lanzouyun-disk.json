@@ -15,12 +15,21 @@
             "蓝奏云盘"
         ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/chenhb23/lanzouyun-disk/releases/latest",
-        "jsonpath": "$.tag_name"
-    },
+    "checkver": [
+        {
+            "url": "https://api.github.com/repos/chenhb23/lanzouyun-disk/releases/latest",
+            "jsonpath": "$.tag_name",
+            "regex": "v(?<version>.+)"
+        },
+        {
+            "url": "https://api.github.com/repos/chenhb23/lanzouyun-disk/releases/latest",
+            "jsonpath": "$..browser_download_url",
+            "regex": "([^/]+\\.zip)$",
+            "variable": "filename"
+        }
+    ],
     "autoupdate": {
-        "url": "https://github.com/chenhb23/lanzouyun-disk/releases/download/$version/lanzouyun-$version-x64-win.zip",
-        "name": "lanzouyun-$version-x64-win.zip"
+        "url": "https://github.com/chenhb23/lanzouyun-disk/releases/download/v$version/$filename",
+        "name": "$filename"
     }
 }

@@ -15,12 +15,21 @@
             "Scribe2SRT"
         ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/cylind/scribe2srt/releases/latest",
-        "jsonpath": "$.tag_name"
-    },
+    "checkver": [
+        {
+            "url": "https://api.github.com/repos/cylind/scribe2srt/releases/latest",
+            "jsonpath": "$.tag_name",
+            "regex": "v(?<version>.+)"
+        },
+        {
+            "url": "https://api.github.com/repos/cylind/scribe2srt/releases/latest",
+            "jsonpath": "$..browser_download_url",
+            "regex": "([^/]+\\.zip)$",
+            "variable": "filename"
+        }
+    ],
     "autoupdate": {
-        "url": "https://github.com/cylind/scribe2srt/releases/download/$version/Scribe2SRT-$version-windows-x86_64.zip",
-        "name": "Scribe2SRT-$version-windows-x86_64.zip"
+        "url": "https://github.com/cylind/scribe2srt/releases/download/v$version/$filename",
+        "name": "$filename"
     }
 }
