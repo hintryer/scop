@@ -17,13 +17,22 @@
                     "MouseClickTool"
                 ]
             ],
-            "checkver": {
-                "url": "https://api.github.com/repos/lalakii/MouseClickTool/releases/latest",
-                "jsonpath": "$.tag_name"
-            },
+            "checkver": [
+                {
+                    "url": "https://api.github.com/repos/lalakii/MouseClickTool/releases/latest",
+                    "jsonpath": "$.tag_name",
+                    "regex": "(?<version>.+)"
+                },
+                {
+                    "url": "https://api.github.com/repos/lalakii/MouseClickTool/releases/latest",
+                    "jsonpath": "$..browser_download_url",
+                    "regex": "([^/]+\\.exe)$",
+                    "variable": "filename"
+                }
+            ],
             "autoupdate": {
-                "url": "https://github.com/lalakii/MouseClickTool/releases/download/$version/MouseClickTool.exe",
-                "name": "MouseClickTool.exe"
+                "url": "https://github.com/lalakii/MouseClickTool/releases/download/$version/$filename",
+                "name": "$filename"
             }
         }
     },
@@ -46,13 +55,22 @@
                     "Notepad4"
                 ]
             ],
-            "checkver": {
-                "url": "https://api.github.com/repos/zufuliu/notepad4/releases/latest",
-                "jsonpath": "$.tag_name"
-            },
+            "checkver": [
+                {
+                    "url": "https://api.github.com/repos/zufuliu/notepad4/releases/latest",
+                    "jsonpath": "$.tag_name",
+                    "regex": "v(?<version>.+)"
+                },
+                {
+                    "url": "https://api.github.com/repos/zufuliu/notepad4/releases/latest",
+                    "jsonpath": "$..browser_download_url",
+                    "regex": "([^/]+\\.zip)$",
+                    "variable": "filename"
+                }
+            ],
             "autoupdate": {
-                "url": "https://github.com/zufuliu/notepad4/releases/download/$version/Notepad4_HD_zh-Hans_x64_$version.zip",
-                "name": "Notepad4_HD_zh-Hans_x64_$version.zip"
+                "url": "https://github.com/zufuliu/notepad4/releases/download/v$version/$filename",
+                "name": "$filename"
             }
         }
     },
@@ -75,13 +93,22 @@
                     "MusicPlayer2"
                 ]
             ],
-            "checkver": {
-                "url": "https://api.github.com/repos/zhongyang219/MusicPlayer2/releases/latest",
-                "jsonpath": "$.tag_name"
-            },
+            "checkver": [
+                {
+                    "url": "https://api.github.com/repos/zhongyang219/MusicPlayer2/releases/latest",
+                    "jsonpath": "$.tag_name",
+                    "regex": "(?<version>.+)"
+                },
+                {
+                    "url": "https://api.github.com/repos/zhongyang219/MusicPlayer2/releases/latest",
+                    "jsonpath": "$..browser_download_url",
+                    "regex": "([^/]+\\.zip)$",
+                    "variable": "filename"
+                }
+            ],
             "autoupdate": {
-                "url": "https://github.com/zhongyang219/MusicPlayer2/releases/download/$version/MusicPlayer2_$version_x64.zip",
-                "name": "MusicPlayer2_$version_x64.zip"
+                "url": "https://github.com/zhongyang219/MusicPlayer2/releases/download/$version/$filename",
+                "name": "$filename"
             }
         }
     },
@@ -99,11 +126,23 @@
             "extract_dir": null,
             "bin": null,
             "shortcuts": [],
-            "checkver": {
-                "url": "https://api.github.com/repos/WEIFENG2333/VideoCaptioner/releases/latest",
-                "jsonpath": "$.tag_name"
-            },
-            "autoupdate": {}
+            "checkver": [
+                {
+                    "url": "https://api.github.com/repos/WEIFENG2333/VideoCaptioner/releases/latest",
+                    "jsonpath": "$.tag_name",
+                    "regex": "(?<version>.+)"
+                },
+                {
+                    "url": "https://api.github.com/repos/WEIFENG2333/VideoCaptioner/releases/latest",
+                    "jsonpath": "$..browser_download_url",
+                    "regex": "([^/]+)$",
+                    "variable": "filename"
+                }
+            ],
+            "autoupdate": {
+                "url": "https://github.com/WEIFENG2333/VideoCaptioner/releases/download/$version/$filename",
+                "name": "$filename"
+            }
         }
     },
     {
@@ -125,13 +164,22 @@
                     "Scribe2SRT"
                 ]
             ],
-            "checkver": {
-                "url": "https://api.github.com/repos/cylind/scribe2srt/releases/latest",
-                "jsonpath": "$.tag_name"
-            },
+            "checkver": [
+                {
+                    "url": "https://api.github.com/repos/cylind/scribe2srt/releases/latest",
+                    "jsonpath": "$.tag_name",
+                    "regex": "v(?<version>.+)"
+                },
+                {
+                    "url": "https://api.github.com/repos/cylind/scribe2srt/releases/latest",
+                    "jsonpath": "$..browser_download_url",
+                    "regex": "([^/]+\\.zip)$",
+                    "variable": "filename"
+                }
+            ],
             "autoupdate": {
-                "url": "https://github.com/cylind/scribe2srt/releases/download/$version/Scribe2SRT-$version-windows-x86_64.zip",
-                "name": "Scribe2SRT-$version-windows-x86_64.zip"
+                "url": "https://github.com/cylind/scribe2srt/releases/download/v$version/$filename",
+                "name": "$filename"
             }
         }
     },
@@ -154,13 +202,22 @@
                     "FFmpeg Batch AV Converter"
                 ]
             ],
-            "checkver": {
-                "url": "https://api.github.com/repos/eibols/ffmpeg_batch/releases/latest",
-                "jsonpath": "$.tag_name"
-            },
+            "checkver": [
+                {
+                    "url": "https://api.github.com/repos/eibols/ffmpeg_batch/releases/latest",
+                    "jsonpath": "$.tag_name",
+                    "regex": "(?<version>.+)"
+                },
+                {
+                    "url": "https://api.github.com/repos/eibols/ffmpeg_batch/releases/latest",
+                    "jsonpath": "$..browser_download_url",
+                    "regex": "([^/]+\\.zip)$",
+                    "variable": "filename"
+                }
+            ],
             "autoupdate": {
-                "url": "https://github.com/eibols/ffmpeg_batch/releases/download/$version/FFmpeg_Batch_AV_Converter_Portable_$version_x64.zip",
-                "name": "FFmpeg_Batch_AV_Converter_Portable_$version_x64.zip"
+                "url": "https://github.com/eibols/ffmpeg_batch/releases/download/$version/$filename",
+                "name": "$filename"
             }
         }
     },
@@ -183,13 +240,22 @@
                     "蓝奏云盘"
                 ]
             ],
-            "checkver": {
-                "url": "https://api.github.com/repos/chenhb23/lanzouyun-disk/releases/latest",
-                "jsonpath": "$.tag_name"
-            },
+            "checkver": [
+                {
+                    "url": "https://api.github.com/repos/chenhb23/lanzouyun-disk/releases/latest",
+                    "jsonpath": "$.tag_name",
+                    "regex": "v(?<version>.+)"
+                },
+                {
+                    "url": "https://api.github.com/repos/chenhb23/lanzouyun-disk/releases/latest",
+                    "jsonpath": "$..browser_download_url",
+                    "regex": "([^/]+\\.zip)$",
+                    "variable": "filename"
+                }
+            ],
             "autoupdate": {
-                "url": "https://github.com/chenhb23/lanzouyun-disk/releases/download/$version/lanzouyun-$version-x64-win.zip",
-                "name": "lanzouyun-$version-x64-win.zip"
+                "url": "https://github.com/chenhb23/lanzouyun-disk/releases/download/v$version/$filename",
+                "name": "$filename"
             }
         }
     },
@@ -212,13 +278,22 @@
                     "LocalSend"
                 ]
             ],
-            "checkver": {
-                "url": "https://api.github.com/repos/localsend/localsend/releases/latest",
-                "jsonpath": "$.tag_name"
-            },
+            "checkver": [
+                {
+                    "url": "https://api.github.com/repos/localsend/localsend/releases/latest",
+                    "jsonpath": "$.tag_name",
+                    "regex": "v(?<version>.+)"
+                },
+                {
+                    "url": "https://api.github.com/repos/localsend/localsend/releases/latest",
+                    "jsonpath": "$..browser_download_url",
+                    "regex": "([^/]+\\.zip)$",
+                    "variable": "filename"
+                }
+            ],
             "autoupdate": {
-                "url": "https://github.com/localsend/localsend/releases/download/$version/LocalSend-$version-windows-x86-64.zip",
-                "name": "LocalSend-$version-windows-x86-64.zip"
+                "url": "https://github.com/localsend/localsend/releases/download/v$version/$filename",
+                "name": "$filename"
             }
         }
     },
@@ -241,13 +316,22 @@
                     "Bili23 Downloader"
                 ]
             ],
-            "checkver": {
-                "url": "https://api.github.com/repos/ScottSloan/Bili23-Downloader/releases/latest",
-                "jsonpath": "$.tag_name"
-            },
+            "checkver": [
+                {
+                    "url": "https://api.github.com/repos/ScottSloan/Bili23-Downloader/releases/latest",
+                    "jsonpath": "$.tag_name",
+                    "regex": "v(?<version>.+)"
+                },
+                {
+                    "url": "https://api.github.com/repos/ScottSloan/Bili23-Downloader/releases/latest",
+                    "jsonpath": "$..browser_download_url",
+                    "regex": "([^/]+\\.zip)$",
+                    "variable": "filename"
+                }
+            ],
             "autoupdate": {
-                "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/$version/Bili23_Downloader-$version-windows-x64.zip",
-                "name": "Bili23_Downloader-$version-windows-x64.zip"
+                "url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v$version/$filename",
+                "name": "$filename"
             }
         }
     },
@@ -269,13 +353,22 @@
                     "Clash Verge Rev"
                 ]
             ],
-            "checkver": {
-                "url": "https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases/latest",
-                "jsonpath": "$.tag_name"
-            },
+            "checkver": [
+                {
+                    "url": "https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases/latest",
+                    "jsonpath": "$.tag_name",
+                    "regex": "v(?<version>.+)"
+                },
+                {
+                    "url": "https://api.github.com/repos/clash-verge-rev/clash-verge-rev/releases/latest",
+                    "jsonpath": "$..browser_download_url",
+                    "regex": "([^/]+\\.exe)$",
+                    "variable": "filename"
+                }
+            ],
             "autoupdate": {
-                "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/$version/Clash.Verge_$version_x64-setup.exe",
-                "name": "Clash.Verge_$version_x64-setup.exe"
+                "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v$version/$filename",
+                "name": "$filename"
             }
         }
     },
@@ -296,13 +389,22 @@
                 "bin/ffprobe.exe",
                 "bin/ffplay.exe"
             ],
-            "checkver": {
-                "url": "https://api.github.com/repos/GyanD/codexffmpeg/releases/latest",
-                "jsonpath": "$.tag_name"
-            },
+            "checkver": [
+                {
+                    "url": "https://api.github.com/repos/GyanD/codexffmpeg/releases/latest",
+                    "jsonpath": "$.tag_name",
+                    "regex": "(?<version>.+)"
+                },
+                {
+                    "url": "https://api.github.com/repos/GyanD/codexffmpeg/releases/latest",
+                    "jsonpath": "$..browser_download_url",
+                    "regex": "([^/]+essentials_build\\.7z)$",
+                    "variable": "filename"
+                }
+            ],
             "autoupdate": {
-                "url": "https://github.com/GyanD/codexffmpeg/releases/download/$version/ffmpeg-$version-essentials_build.7z",
-                "name": "ffmpeg-$version-essentials_build.7z"
+                "url": "https://github.com/GyanD/codexffmpeg/releases/download/$version/$filename",
+                "name": "$filename"
             }
         }
     },
@@ -323,13 +425,22 @@
                 "bin/ffprobe.exe",
                 "bin/ffplay.exe"
             ],
-            "checkver": {
-                "url": "https://api.github.com/repos/GyanD/codexffmpeg/releases/latest",
-                "jsonpath": "$.tag_name"
-            },
+            "checkver": [
+                {
+                    "url": "https://api.github.com/repos/GyanD/codexffmpeg/releases/latest",
+                    "jsonpath": "$.tag_name",
+                    "regex": "(?<version>.+)"
+                },
+                {
+                    "url": "https://api.github.com/repos/GyanD/codexffmpeg/releases/latest",
+                    "jsonpath": "$..browser_download_url",
+                    "regex": "([^/]+full_build\\.7z)$",
+                    "variable": "filename"
+                }
+            ],
             "autoupdate": {
-                "url": "https://github.com/GyanD/codexffmpeg/releases/download/$version/ffmpeg-$version-full_build.7z",
-                "name": "ffmpeg-$version-full_build.7z"
+                "url": "https://github.com/GyanD/codexffmpeg/releases/download/$version/$filename",
+                "name": "$filename"
             }
         }
     },
@@ -349,13 +460,22 @@
                 "bin/git.exe",
                 "cmd/git.exe"
             ],
-            "checkver": {
-                "url": "https://api.github.com/repos/git-for-windows/git/releases/latest",
-                "jsonpath": "$.tag_name"
-            },
+            "checkver": [
+                {
+                    "url": "https://api.github.com/repos/git-for-windows/git/releases/latest",
+                    "jsonpath": "$.tag_name",
+                    "regex": "v(?<version>.+)"
+                },
+                {
+                    "url": "https://api.github.com/repos/git-for-windows/git/releases/latest",
+                    "jsonpath": "$..browser_download_url",
+                    "regex": "([^/]+PortableGit.+\\.7z\\.exe)$",
+                    "variable": "filename"
+                }
+            ],
             "autoupdate": {
-                "url": "https://github.com/git-for-windows/git/releases/download/$version/PortableGit-$version-64-bit.7z.exe",
-                "name": "PortableGit-$version-64-bit.7z.exe"
+                "url": "https://github.com/git-for-windows/git/releases/download/v$version/$filename",
+                "name": "$filename"
             }
         }
     }
