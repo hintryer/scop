@@ -1,28 +1,34 @@
 {
-    "version": "3.1.0.0",
-    "description": "A simple mouse auto-clicker tool.",
+    "name": "MouseClickTool.exe",
+    "savedir": "单文件",
+    "version": "1.0",
+    "description": "鼠标自动点击工具",
     "homepage": "https://github.com/lalakii/MouseClickTool",
     "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/lalakii/MouseClickTool/releases/download/3.1.0.0/MouseClickTool.exe",
-            "hash": "7d516f083993cf4ce503a1d105ba97748d31d9fe70fbe0037b043e3761b9d55c"
-        }
-    },
+    "url": "https://github.com/lalakii/MouseClickTool/releases/download/3.1.0.0/MouseClickTool.exe",
+    "hash": "auto",
+    "bin": "MouseClickTool.exe",
     "shortcuts": [
         [
             "MouseClickTool.exe",
             "MouseClickTool"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/lalakii/MouseClickTool"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/lalakii/MouseClickTool/releases/download/$version/MouseClickTool.exe"
-            }
+    "checkver": [
+        {
+            "url": "https://api.github.com/repos/lalakii/MouseClickTool/releases/latest",
+            "jsonpath": "$.tag_name",
+            "regex": "(?<version>.+)"
+        },
+        {
+            "url": "https://api.github.com/repos/lalakii/MouseClickTool/releases/latest",
+            "jsonpath": "$..browser_download_url",
+            "regex": "([^/]+\\.exe)$",
+            "variable": "filename"
         }
+    ],
+    "autoupdate": {
+        "url": "https://github.com/lalakii/MouseClickTool/releases/download/$version/$filename",
+        "name": "$filename"
     }
 }
