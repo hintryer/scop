@@ -1,35 +1,36 @@
 {
-    "name": "LocalSend-1.17.0-windows-x86-64.zip",
-    "savedir": "下载传输",
-    "version": "1.0",
-    "description": "局域网文件互传工具",
+    "version": "1.17.0",
+    "description": "Share files to nearby devices. An open source cross-platform alternative to AirDrop.",
     "homepage": "https://localsend.org/",
-    "license": "MIT",
-    "url": "https://github.com/localsend/localsend/releases/download/v1.17.0/LocalSend-1.17.0-windows-x86-64.zip",
-    "hash": "auto",
-    "extract_dir": "LocalSend-1.17.0-windows-x86-64",
-    "bin": "LocalSend.exe",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.ghproxy.cn/https://github.com/localsend/localsend/releases/download/v1.17.0/LocalSend-1.17.0-windows-x86-64.zip",
+            "hash": "a4ffb41fcbc3bd0f2f0cbd30b62a58d9a478eaf1da63eb410886886064abe70c"
+        }
+    },
+    "bin": [
+        "localsend_app.exe",
+        [
+            "localsend_app.exe",
+            "localsend"
+        ]
+    ],
     "shortcuts": [
         [
-            "LocalSend.exe",
+            "localsend_app.exe",
             "LocalSend"
         ]
     ],
-    "checkver": [
-        {
-            "url": "https://api.github.com/repos/localsend/localsend/releases/latest",
-            "jsonpath": "$.tag_name",
-            "regex": "v(?<version>.+)"
-        },
-        {
-            "url": "https://api.github.com/repos/localsend/localsend/releases/latest",
-            "jsonpath": "$..browser_download_url",
-            "regex": "([^/]+\\.zip)$",
-            "variable": "filename"
-        }
-    ],
+    "persist": "settings.json",
+    "checkver": {
+        "github": "https://github.com/localsend/localsend"
+    },
     "autoupdate": {
-        "url": "https://github.com/localsend/localsend/releases/download/v$version/$filename",
-        "name": "$filename"
+        "architecture": {
+            "64bit": {
+                "url": "https://www.ghproxy.cn/https://github.com/localsend/localsend/releases/download/v$version/LocalSend-$version-windows-x86-64.zip"
+            }
+        }
     }
 }
